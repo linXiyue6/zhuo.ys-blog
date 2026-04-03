@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 移动端不缩小 -->
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+        }
+        @media screen and (max-width:768px){
+            .box{
+                background-color: blue;
+            }
+            .p1{
+                display: none;
+            }
+        }
+        @media screen and (min-width:769px) and (max-width:996px){
+            .box{
+                background-color: green;
+            }
+            .p2{
+                display: none;
+            }
+        }
+        @media screen and (min-width:997px) {
+            .box{
+                background-color: red;
+            }
+        }
+        /* ps:此处请注意有可能绿色的块不会显示，原因是我刚开始将绿色的块范围定为：
+        @media screen and (min-width:768px) and (max-width:997px)
+        与其余两个重叠了，修改之后能够正常显示，所以注意此处不要将范围重叠
+        */
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <p class="p1">hhhh</p>
+    <p class="p2">ccccccc</p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #somediv{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            opacity: 1;
+            /* 1表示不透明 */
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div id="somediv"></div>
+
+    <script>
+
+        var div = document.getElementById("somediv");
+        var opacity = 1;
+        var fade = setInterval(function(){
+
+            if(opacity<=0){
+                clearInterval(fade)
+            }else{
+                opacity-=0.05;
+                div.style.opacity=opacity;
+            }
+        },1000)
+
+    </script>
+
+</body>
+</html>

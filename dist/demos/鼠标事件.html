@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">单击</button>
+    <button id="btn2">双击</button>
+    <button id="btn3">按下</button>
+    <button id="btn4">抬起</button>
+    <div id="btn5">鼠标移动</div>
+
+    <script>
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+        var btn4 = document.getElementById("btn4");
+        var btn5 = document.getElementById("btn5");
+        btn1.onclick = function()
+        {
+            console.log("单击事件");
+            
+        }
+        btn2.ondblclick = function()
+        {
+            console.log("双击事件");
+            
+        }
+        btn3.onmousedown = function()
+        {
+            console.log("按下");
+            
+        }
+        btn4.onmouseup = function()
+        {
+            console.log("抬起");
+            
+        }
+        btn5.onmousemove= function()
+        {
+            console.log("移动");
+            
+        }
+    </script>
+</body>
+</html>

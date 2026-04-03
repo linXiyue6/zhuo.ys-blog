@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h3>hhhh</h3>
+    <h3>hhhh</h3>
+    <h3>hhhh</h3>
+    <h3>hhhh</h3>
+    <h3>hhhh</h3>
+    <h3>hhhh</h3>
+
+    <script>
+
+        function debouce(fn,delay){
+            var timer = null;
+            return function()
+            {
+                if(timer){ // 判断是否存在定时器
+                    clearTimeout(timer);
+                }
+                // 如果定时器存在则清楚定时器，也就是重置定时器
+                timer = setTimeout(fn,delay);
+            }// 这里是闭包
+        }
+
+
+        // 滚动事件
+        window.onscroll = debouce(scrolhandle,200)
+        
+        function scrolhandle(){
+            console.log("页面滚动");
+            var scrolltop = document.documentElement.scrollTop;
+            console.log(scrolltop);
+            
+        }
+
+    </script>
+</body>
+</html>

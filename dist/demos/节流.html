@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h3>hhhh</h3>
+    <h3>hhhh</h3>
+    <h3>hhhh</h3>
+    <h3>hhhh</h3>
+    <h3>hhhh</h3>
+    <h3>hhhh</h3>
+    <h3>hhhh</h3>
+
+
+    <script>
+
+        function throttle(fn,delay){
+            var valid =true;
+            return function(){
+                if (!valid){
+                    return false;//第一次执行的时候啥都不会干
+                }
+                valid = false;
+                setTimeout(function(){
+                    fn();
+                    valid = true;
+                },delay)
+            }
+        }
+
+                // 滚动事件
+        window.onscroll = throttle(scrolhandle,2000)
+        
+        function scrolhandle(){
+            console.log("页面滚动");
+            var scrolltop = document.documentElement.scrollTop;
+            console.log(scrolltop);
+            
+        }
+
+    </script>
+</body>
+</html>

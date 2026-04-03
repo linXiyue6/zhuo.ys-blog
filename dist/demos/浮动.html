@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            float: left;
+            /* right/left */
+            /* 浮动也可以让块变成横向摆放 */
+            /* 浮动会导致父级元素高度坍塌,影响后代 */
+            margin: 5px;
+            /* 如果此时删去父元素的高宽会导致父级块消失，其实就是无法被撑开（塌陷了） */
+        }
+        .content{
+            width: 500px;
+            height: 500px;
+            background-color: blueviolet;
+        }
+        img{
+            width: 300px;
+            float: left;
+        }
+        .text{ 
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            clear: both;
+        }
+        /* 后续的text收到影响了 */
+        /* 清楚浮动造成的影响：父元素设置宽高、受影响的元素添加clear元素清楚浮动影响、
+        overflow：hidden+clear:both此时父级元素会和子代撑开的大小一样
+        伪对象形式：给父级元素添加after变成伪对象  */
+        /* .content::after{
+            content: "";
+            display: block;
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="text"></div>
+    </div>
+    <div>
+        <img src="./阿萨背景图.jpg" alt="">
+        <img src="./阿萨背景图.jpg" alt="">
+    </div>
+</body>
+</html>
