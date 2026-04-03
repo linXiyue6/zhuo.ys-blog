@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>语文</th>
+                <th>数学</th>
+                <th>英语</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>99</td>
+                <td rowspan="2">100</td>
+                <td>199</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>98</td>
+                <!-- <td>100</td> -->
+                <td>198</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>总结</td>
+                <td colspan="3">全市第一</td>
+                <!-- <td>全市第一</td>
+                <td>全市第一</td> -->
+            </tr>
+        </tfoot>
+    </table>
+    <!-- 第二次学习 -->
+    <!-- 表格标签：table,行tr,列td -->
+    <table>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </table>
+    <!-- 快捷键：table>te*n>td*m{文本信息} 例如：table>tr*3>td*4{单元格}-->
+     <table>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+     </table>
+     <!-- 属性：border边框，width宽度 高度geight-->
+     <table border="1" width="200" height="200">
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+     </table>
+     <!-- 合并表格 -->
+      <p>合并单元格6，7：colspan</p>
+      <p>合并15，20 rowspan</p>
+      <!-- 水平合并保留左边删除右边，垂直保留上删除下 -->
+      <table border="1" width="600" height="400">
+        <tr>
+            <td>单元格1</td>
+            <td>单元格2</td>
+            <td>单元格3</td>
+            <td>单元格4</td>
+            <td>单元格5</td>
+        </tr>
+        <tr>
+            <td colspan="2">单元格6，7</td>
+            <!-- <td>单元格7</td> -->
+            <!-- 两个单元格则参数设置为2，单元格7可以直接注释掉 -->
+            <td>单元格8</td>
+            <td>单元格9</td>
+            <td>单元格10</td>
+        </tr>
+        <tr>
+            <td>单元格11</td>
+            <td>单元格12</td>
+            <td>单元格13</td>
+            <td>单元格14</td>
+            <td rowspan="2">单元格15</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">单元格16，17，22，23</td>
+            <!-- <td>单元格18</td> -->
+            <td>单元格18</td>
+            <!-- <td>单元格29</td> -->
+            <td>单元格20</td>
+        </tr>
+        <tr>
+            <!-- <td>单元格22</td> -->
+            <!-- <td>单元格23</td> -->
+            <td>单元格24</td>
+            <td>单元格25</td>
+            <td>单元格26</td>
+        </tr>
+      </table>
+</body>
+</html>

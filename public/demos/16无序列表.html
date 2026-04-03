@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无序列表</title>
+</head>
+<body>
+    <!-- 是一个项目列表，使用粗体圆点进行标记 -->
+    <!-- 是ul+li标签 -->
+    <ul>
+        <li>数学</li>
+        <li>语文</li>
+        <li>英语</li>
+    </ul>
+    <!-- 也有type属性 ，disc默认实心圆,circle空心圆,square小方块，none不显示-->
+    <ul type="circle">
+        <li>数学</li>
+        <li>语文</li>
+        <li>英语</li>
+    </ul>
+    <ul type="square">
+        <li>数学</li>
+        <li>语文</li>
+        <li>英语</li>
+    </ul>
+    <ul type="none">
+        <li>数学</li>
+        <li>语文</li>
+        <li>英语</li>
+    </ul>
+    <!-- 无序列表也可以嵌套 -->
+     <ul>
+        <li>
+            学科
+            <ul type="circle">
+                <li>数学</li>
+                <li>语文</li>
+                <li>英语</li>
+            </ul>
+        </li>
+        <li>教师</li>
+        <li>教师</li>
+     </ul>
+     <!-- 常见的场景：导航效果看，快捷键：ul>li*n,生成n个li标签的结构 -->
+</body>
+</html>

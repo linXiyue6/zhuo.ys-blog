@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .icon{
+            display:block;
+            width: 45px;
+            height: 70px;
+            background-image: url("../images/bg_1.png");
+            border: 1px solid red;
+            background-position: -3px 0;
+        }
+        .icon2{
+            display:block;
+            width: 45px;
+            height: 70px;
+            background-image: url("../images/bg_1.png");
+            border: 1px solid red;
+            background-position: -482px -153px;
+        }
+    </style>
+</head>
+<body>
+    <p>css雪碧图，是一种网页图片应用处理方式，允许将一个页面涉及到的所有零星图片都包含到一张大图中去</p>
+    <span class="icon"></span>
+    <p>主要是通过background-image和background-position来实现，
+        在一个大图片中放入许多小图片，然后通过不断调整位置来实现，就跟扣一块需要的放到不同的位置一样
+    我这里用的图片是关于我部分的背景图</p>
+    <span class="icon2"></span>
+    <p>r如果觉得抽象可以打开控制台（F12）滚轮调整background-position的值玩儿一下</p>
+</body>
+</html>

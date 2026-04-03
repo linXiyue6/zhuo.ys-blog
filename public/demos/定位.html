@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: rebeccapurple;
+            position: relative;
+            /* position: relative在文档流中摆放位置 */
+            /* relative相对定位，后面跟着left：100px、top */
+            left: 300px;
+            top: 200px;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            position: absolute;
+            left: 100px;
+            top: 50px;
+            /* position: absolute会把块从文档流中拿出来再摆放位置 */
+            /* 绝对定位，一个绝对定位就有一层，有需要压盖的可以用 */
+        }
+        .box3{
+            width: 100px;
+            height: 200px;
+            background-color: burlywood;
+            position: fixed;
+            right: 100px;
+            bottom: 100px;
+            /* 脱离文档流，固定定位，随着页面滚动而固定 */
+        }
+        /* 定位是根据上一级有定位的父级元素来找位置，如果没有再找上一级，都没有就根据文档 */
+        /* z-index:数字，数字越大越上 */
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

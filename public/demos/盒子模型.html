@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            padding: 50px 10px;
+            /* 内边距撑大自身大小，不让文字紧贴盒子变距，上下一个值，左右一个值 */
+            /* 可以完全分开来写：padding-left、padding-top等 */
+            border: 5px solid black;
+            /* 围绕内边距和内容外的边框 */
+            margin: 50px;
+            /* 完全透明，一个值上下，第二个值左右 */
+            /* 也可以完全分开写 */
+        }
+        /* 弹性盒子模型 */
+        .box1{
+            color: black;
+            flex: 2;
+        }
+        .box2{
+            color: rgb(0, 209, 251);
+            flex: 2;
+        }
+        .box3{
+            color: rgb(255, 0, 0);
+            flex: 1;
+            /* 设置了flex可以理解为权重，此时宽高不宰生效 */
+        }
+        .con{
+            width: 800px;
+            height: 800px;
+            background-color: black;
+            display: flex;
+            /* 默认为水平摆放开启弹性盒子 */
+            flex-direction: row;
+            /* 摆放的位置可以改为垂直或者翻转 */
+            justify-content: flex-end;
+            /* 垂直方向上的摆放flex-start默认居上，flex-end距下，center居中 */
+            align-items: end;
+            /* 水平方向start/center/end */
+        }
+    </style>
+</head>
+<body>
+    <!-- 盒子模型包括：实际内容content，内边距padding，边框border，外边距margin -->
+     <div>
+        我是内容内容内容内容
+     </div>
+     <p>pppppppppppppp</p>
+    <div class="con">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

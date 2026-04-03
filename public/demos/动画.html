@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation: myanim 3s linear 0s infinite normal ;
+        }
+        div:hover{
+            animation-play-state: paused;
+            /* 这里是鼠标划上去会触发的效果 */
+        }
+        @keyframes myanim {
+            0%{
+                width: 200px;
+                background-color: red;
+            }
+            50%{
+                width: 300px;
+                background-color: gray;
+            }
+            100%{
+                width: 400px;
+                background-color: blue;
+            }
+            /* naem duration持续时间 
+            timing-function动画效果的效率:linear匀速 ease逐渐变慢 ease-in加速 ease-out减速 ease-in-out先加速后减速  */
+            /* delay延时执行 iteration-count设置动画循环的次数，infinite为无限循环
+            direction设置动画播放的方向，normal默认正向，alternate反向
+             animation-play-state控制动画的播放状态：run代表播放，pause代表停止 */
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    
+</body>
+</html>

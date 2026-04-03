@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #fff;
+  color: #333;
+  transition: 0.3s;
+}
+body.dark {
+  background: #1a1a1a;
+  color: #eee;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body.dark a {
+  color: #eee;
+}

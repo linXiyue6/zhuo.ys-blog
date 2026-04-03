@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="clickHandel()" >按钮</button>
+    <script>
+        function clickHandel(){
+            console.log("点击了按钮");
+        }
+    </script>
+    <p>缺点：heml和js没有分开</p>
+
+    <p>----------</p>
+    <button id="bt1">DOM0anniu</button>
+    <script>
+        var btn = document.getElementById("bt1");
+        btn.onclick=function(){
+            console.log("DOM0按钮被按下了");
+            
+        }
+    </script>
+    <p>优点：html和js分开了,缺点：无法同时添加多个事件</p>
+
+    <p>---------</p>
+    <button id="bt2">DOM2按钮</button>
+
+    <script>
+
+        var btn_2=document.getElementById("bt2");
+        btn_2.addEventListener("click",
+            function(){
+                console.log("DOM2打印");
+                
+            }
+        )
+    </script>
+    <p>优点：可以添加多个事件，缺点：写起来麻烦</p>
+
+</body>
+</html>
